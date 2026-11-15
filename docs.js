@@ -20,7 +20,7 @@ const DOCS = [
     pages: 5,
     size: "1 MB",
     description: "HFCL_Limited_Forensic___Cycle-Normalized_Analysis",
-    file: "pdfs/TCS_Annual_Report_FY25.pdf",
+    file: "pdfs/HFCL_Limited_Forensic___Cycle-Normalized_Analysis",
     tags: ["HFCL", "IT", "HFCL", "Research Report", "FY26"],
   },
   {
