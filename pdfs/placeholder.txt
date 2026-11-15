@@ -1,0 +1,9 @@
+Upload your PDF files to this folder.
+
+Each PDF should be added here and then referenced in docs.js.
+
+Example file naming convention:
+  TCS_Annual_Report_FY25.pdf
+  Reliance_Q4FY25_Concall_Transcript.pdf
+  HDFC_Bank_Investor_Presentation_Q4FY25.pdf
+  SEBI_Order_CompanyName_Date.pdf
