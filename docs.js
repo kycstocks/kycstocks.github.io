@@ -21,7 +21,7 @@ const DOCS = [
     size: "1 MB",
     description: "HFCL_Limited_Forensic___Cycle-Normalized_Analysis",
     file: "pdfs/HFCL_Limited_Forensic___Cycle-Normalized_Analysis",
-    tags: [ "HFCL", "Research Reports 26", "FY26"],
+    tags: [ "HFCL","HFCL-R-26","Research Reports 26", "FY26"],
   },
   {
     id: "reliance-ar-fy25",
