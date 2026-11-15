@@ -10,8 +10,8 @@
 const DOCS = [
   // ── SAMPLE ENTRIES — replace with real PDFs ─────────────────
   {
-    id: "HFCL 26-27",
-    title: "Research Reports 26-27",
+    id: "HFCL",
+    title: "Research Reports",
     company: "HFCL",
     ticker: "HFCL",
     category: "Research Reports",
