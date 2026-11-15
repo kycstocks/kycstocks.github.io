@@ -10,8 +10,8 @@
 const DOCS = [
   // ── SAMPLE ENTRIES — replace with real PDFs ─────────────────
   {
-    id: "HFCL",
-    title: "Research Reports",
+    id: "HFCL-R-26",
+    title: "Research Reports 26",
     company: "HFCL",
     ticker: "HFCL",
     category: "Research Reports",
@@ -21,7 +21,7 @@ const DOCS = [
     size: "1 MB",
     description: "HFCL_Limited_Forensic___Cycle-Normalized_Analysis",
     file: "pdfs/HFCL_Limited_Forensic___Cycle-Normalized_Analysis",
-    tags: [ "HFCL", "Research Reports", "FY26"],
+    tags: [ "HFCL", "Research Reports 26", "FY26"],
   },
   {
     id: "reliance-ar-fy25",
