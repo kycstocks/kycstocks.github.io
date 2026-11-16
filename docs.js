@@ -18,10 +18,10 @@ const DOCS = [
     date: "2026-11-15",
     year: "FY26",
     pages: 5,
-    size: "1 MB",
+    size: "269 KB",
     description: "HFCL_Limited Forensic",
     file: "pdfs/HFCL_Limited Forensic.pdf",
-    tags: [ "HFCL","HFCL-R-26","Research Reports", "FY26"],
+    tags: [ "HFCL","Research Reports 26", "FY26"],
   },
 ];
 
