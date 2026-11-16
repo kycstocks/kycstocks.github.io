@@ -14,14 +14,14 @@ const DOCS = [
     title: "Research Reports 26",
     company: "HFCL",
     ticker: "HFCL",
-    category: "🔬 Research Reports",
+    category: "research",
     date: "2026-11-15",
     year: "FY26",
     pages: 5,
     size: "323 KB",
     description: "HFCL_Limited Forensic",
     file: "pdfs/HFCL_Limited Forensic.pdf",
-    tags: [ "HFCL","Research Reports 26", "FY26"],
+    tags: [ "HFCL","Research Reports", "FY26"],
   },
 ];
 
