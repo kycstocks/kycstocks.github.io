@@ -19,8 +19,8 @@ const DOCS = [
     year: "FY26",
     pages: 5,
     size: "1 MB",
-    description: "HFCL_Limited_-_Forensic___Cycle-Normalized_Analysis",
-    file: "pdfs/HFCL_Limited_-_Forensic___Cycle-Normalized_Analysis.pdf",
+    description: "HFCL_Limited Forensic",
+    file: "pdfs/HFCL_Limited Forensic.pdf",
     tags: [ "HFCL","HFCL-R-26","Research Reports", "FY26"],
   },
 ];
