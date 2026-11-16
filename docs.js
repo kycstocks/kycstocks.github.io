@@ -14,7 +14,7 @@ const DOCS = [
     title: "Research Reports 26",
     company: "HFCL",
     ticker: "HFCL",
-    category: "Research Reports",
+    category: "🔬 Research Reports",
     date: "2026-11-15",
     year: "FY26",
     pages: 5,
