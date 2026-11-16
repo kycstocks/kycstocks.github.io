@@ -6,85 +6,98 @@
   <title>PDF Viewer — KYCStock</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="viewer-page">
 
-<!-- ══ TOPBAR ══ -->
-<header class="topbar">
-  <div class="topbar-inner">
-    <a href="index.html" class="brand">
-      <div class="brand-logo">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-logo">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+        </div>
+        <div>
+          <span class="brand-name">KYCStock</span>
+          <span class="brand-tag">Know Your Company · Know Your Stock</span>
+        </div>
+      </a>
+      <div class="viewer-topbar-right">
+        <div class="viewer-doc-info" id="viewer-doc-info">
+          <span class="viewer-doc-company" id="v-company">—</span>
+          <span class="viewer-doc-title" id="v-title">—</span>
+        </div>
+        <div class="viewer-actions">
+          <a id="v-download" href="#" download class="btn-viewer btn-download" title="Download PDF">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </a>
+          <a id="v-open" href="#" target="_blank" class="btn-viewer btn-open" title="Open in new tab">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Open
+          </a>
+          <a href="index.html" class="btn-viewer btn-back">← Library</a>
+        </div>
       </div>
-      <div>
-        <span class="brand-name">KYCStock</span>
-        <span class="brand-tag">Know Your Company · Know Your Stock</span>
+    </div>
+  </header>
+
+  <div class="viewer-shell">
+    <aside class="viewer-sidebar" id="viewer-sidebar">
+      <div class="vsb-header">
+        <span class="vsb-title">Document Details</span>
       </div>
-    </a>
-    <div class="viewer-topbar-right">
-      <div class="viewer-doc-info" id="viewer-doc-info">
-        <span class="viewer-doc-company" id="v-company">—</span>
-        <span class="viewer-doc-title" id="v-title">—</span>
+      <div class="vsb-body" id="vsb-body">
+        <div class="vsb-row"><span class="vsb-label">Company</span><span class="vsb-val" id="vsb-company">—</span></div>
+        <div class="vsb-row"><span class="vsb-label">Ticker</span><span class="vsb-val" id="vsb-ticker">—</span></div>
+        <div class="vsb-row"><span class="vsb-label">Category</span><span class="vsb-val" id="vsb-category">—</span></div>
+        <div class="vsb-row"><span class="vsb-label">Date</span><span class="vsb-val" id="vsb-date">—</span></div>
+        <div class="vsb-row"><span class="vsb-label">Year</span><span class="vsb-val" id="vsb-year">—</span></div>
+        <div class="vsb-desc-label">Description</div>
+        <div class="vsb-desc" id="vsb-desc">—</div>
       </div>
-      <div class="viewer-actions">
-        <a id="v-download" href="#" download class="btn-viewer btn-download" title="Download PDF">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Download
-        </a>
-        <a id="v-open" href="#" target="_blank" class="btn-viewer btn-open" title="Open in new tab">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-          Open
-        </a>
-        <a href="index.html" class="btn-viewer btn-back">← Library</a>
+
+      <div class="vsb-related">
+        <div class="vsb-title">More from this company</div>
+        <div id="vsb-related-list" class="vsb-related-list"></div>
+      </div>
+    </aside>
+
+    <div class="viewer-main">
+      <div class="viewer-toolbar" aria-label="PDF toolbar">
+        <div class="viewer-toolbar-group">
+          <button id="zoom-out" class="viewer-tool" type="button" aria-label="Zoom out">−</button>
+          <button id="zoom-in" class="viewer-tool" type="button" aria-label="Zoom in">+</button>
+        </div>
+        <div class="viewer-toolbar-group">
+          <button id="prev-page" class="viewer-tool" type="button">Previous</button>
+          <span id="page-indicator" class="page-indicator">Page 1 / 1</span>
+          <button id="next-page" class="viewer-tool" type="button">Next</button>
+        </div>
+      </div>
+
+      <div class="pdf-loading" id="pdf-loading">
+        <div class="pdf-spinner"></div>
+        <div class="pdf-loading-text">Loading document…</div>
+      </div>
+
+      <div id="pdf-canvas-wrap" class="pdf-canvas-wrap">
+        <canvas id="pdf-canvas"></canvas>
+      </div>
+
+      <div class="pdf-fallback" id="pdf-fallback" hidden>
+        <div class="fallback-icon">📄</div>
+        <h3>PDF could not be rendered in the browser</h3>
+        <p>Please use the options below to view or download the document.</p>
+        <div class="fallback-actions">
+          <a id="fallback-download" href="#" class="btn-primary" download>Download PDF</a>
+          <a id="fallback-open" href="#" class="btn-secondary" target="_blank">Open in New Tab</a>
+        </div>
       </div>
     </div>
   </div>
-</header>
 
-<!-- ══ VIEWER SHELL ══ -->
-<div class="viewer-shell">
-
-  <!-- SIDEBAR -->
-  <aside class="viewer-sidebar" id="viewer-sidebar">
-    <div class="vsb-header">
-      <span class="vsb-title">Document Details</span>
-    </div>
-    <div class="vsb-body" id="vsb-body">
-      <div class="vsb-row"><span class="vsb-label">Company</span><span class="vsb-val" id="vsb-company">—</span></div>
-      <div class="vsb-row"><span class="vsb-label">Ticker</span><span class="vsb-val" id="vsb-ticker">—</span></div>
-      <div class="vsb-row"><span class="vsb-label">Category</span><span class="vsb-val" id="vsb-category">—</span></div>
-      <div class="vsb-row"><span class="vsb-label">Date</span><span class="vsb-val" id="vsb-date">—</span></div>
-      <div class="vsb-row"><span class="vsb-label">Year</span><span class="vsb-val" id="vsb-year">—</span></div>
-      <div class="vsb-desc-label">Description</div>
-      <div class="vsb-desc" id="vsb-desc">—</div>
-    </div>
-
-    <!-- Related docs -->
-    <div class="vsb-related">
-      <div class="vsb-title">More from this company</div>
-      <div id="vsb-related-list" class="vsb-related-list"></div>
-    </div>
-  </aside>
-
-  <!-- PDF FRAME -->
-  <div class="viewer-main">
-    <div class="pdf-loading" id="pdf-loading">
-      <div class="pdf-spinner"></div>
-      <div class="pdf-loading-text">Loading document…</div>
-    </div>
-    <iframe id="pdf-frame" class="pdf-frame" src="" title="PDF Viewer" allowfullscreen></iframe>
-    <div class="pdf-fallback" id="pdf-fallback" hidden>
-      <div class="fallback-icon">📄</div>
-      <h3>PDF cannot be displayed inline</h3>
-      <p>Your browser may not support inline PDF display.</p>
-      <a id="fallback-download" href="#" class="btn-primary" download>Download PDF</a>
-      <a id="fallback-open" href="#" class="btn-secondary" target="_blank">Open in New Tab</a>
-    </div>
-  </div>
-</div>
-
-<script src="docs.js"></script>
-<script src="viewer.js"></script>
+  <script src="docs.js"></script>
+  <script src="viewer.js"></script>
 </body>
 </html>
