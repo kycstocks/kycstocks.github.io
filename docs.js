@@ -48,7 +48,7 @@ const DOCS = [
     pages: 5,
     size: "325 KB",
     description: "Sammaan_Capital Forensic",
-    file: "pdfs/Sammaan_Capital Forensic",
+    file: "pdfs/Sammaan_Capital Forensic.pdf",
     tags: [ "SAMMAANCAP","Research Reports", "Q3 FY26"],
   },
 ];
