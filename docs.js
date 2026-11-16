@@ -16,7 +16,7 @@ const DOCS = [
     ticker: "HFCL",
     category: "research",
     date: "2026-11-15",
-    year: "FY26",
+    year: "Q3 FY26",
     pages: 5,
     size: "323 KB",
     description: "HFCL_Limited Forensic",
