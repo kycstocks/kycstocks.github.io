@@ -45,7 +45,7 @@ const DOCS = [
     category: "research",
     date: "2026-11-15",
     year: "Q3 FY26",
-    pages: 5,
+    pages: 4,
     size: "325 KB",
     description: "Sammaan_Capital Forensic",
     file: "pdfs/Sammaan_Capital Forensic.pdf",
