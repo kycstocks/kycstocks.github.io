@@ -37,6 +37,20 @@ const DOCS = [
     file: "pdfs/RIR_POWER Forensic.pdf",
     tags: [ "RIRPOWER","Research Reports", "Q3 FY26"],
   },
+  {
+    id: "Sammaan Capital-R-26",
+    title: "Research Reports 26",
+    company: "Sammaan Capital Ltd.",
+    ticker: "SAMMAANCAP",
+    category: "research",
+    date: "2026-11-15",
+    year: "Q3 FY26",
+    pages: 5,
+    size: "325 KB",
+    description: "Sammaan_Capital Forensic",
+    file: "pdfs/Sammaan_Capital Forensic",
+    tags: [ "SAMMAANCAP","Research Reports", "Q3 FY26"],
+  },
 ];
 
 /**
