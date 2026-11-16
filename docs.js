@@ -17,7 +17,7 @@ const DOCS = [
     category: "Research Reports",
     date: "2026-11-15",
     year: "FY26",
-    pages: 5,
+    pages: 3,
     size: "269 KB",
     description: "HFCL_Limited Forensic",
     file: "pdfs/HFCL_Limited Forensic.pdf",
