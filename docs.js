@@ -21,7 +21,21 @@ const DOCS = [
     size: "323 KB",
     description: "HFCL_Limited Forensic",
     file: "pdfs/HFCL_Limited Forensic.pdf",
-    tags: [ "HFCL","Research Reports", "FY26"],
+    tags: [ "HFCL","Research Reports", "Q3 FY26"],
+  },
+  {
+    id: "RIR-R-26",
+    title: "Research Reports 26",
+    company: "RIR Power Electronics Ltd.",
+    ticker: "RIRPOWER",
+    category: "research",
+    date: "2026-11-15",
+    year: "Q3 FY26",
+    pages: 5,
+    size: "349 KB",
+    description: "RIR_POWER Forensic",
+    file: "pdfs/RIR_POWER Forensic.pdf",
+    tags: [ "RIRPOWER","Research Reports", "Q3 FY26"],
   },
 ];
 
