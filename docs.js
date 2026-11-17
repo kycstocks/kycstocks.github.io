@@ -11,7 +11,7 @@ const DOCS = [
   // ── SAMPLE ENTRIES — replace with real PDFs ─────────────────
   {
     id: "HFCL-R-26",
-    title: "Research Reports 26",
+    title: "Third Eye View 26",
     company: "HFCL",
     ticker: "HFCL",
     category: "research",
@@ -21,7 +21,7 @@ const DOCS = [
     size: "323 KB",
     description: "HFCL_Limited Forensic",
     file: "pdfs/HFCL_Limited Forensic.pdf",
-    tags: [ "HFCL","Research Reports", "Q3 FY26"],
+    tags: [ "HFCL","Third Eye View", "Q3 FY26"],
   },
    {
     id: "HSCL-R-26",
