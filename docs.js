@@ -34,7 +34,7 @@ const DOCS = [
     pages: 6,
     size: "378 KB",
     description: "Sterlite Technologies Limited_Forensic",
-    file: "pdfs/Sterlite Technologies Limited_Forensic.pdf",
+    file: "pdfs/Sterlite Technologies Limitet_Forensic.pdf",
     tags: [ "STLTECH","Third Eye View", "Q3 FY26"],
   },
   {
