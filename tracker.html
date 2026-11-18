@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Rank stocks from KYCStock Third Eye View reports using four equally weighted research criteria.">
-  <title>Third Eye View Stock Tracker — KYCStock</title>
+  <meta name="description" content="Compare companies using research report metadata in the KYCStock library.">
+  <title>Research Coverage Tracker — KYCStock</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -28,49 +28,47 @@
   <main class="tracker-main">
     <section class="tracker-hero">
       <div class="tracker-eyebrow">👁️ Third Eye View · Research tracker</div>
-      <h1>Compare the companies.<br><span>Rank with your own conviction.</span></h1>
-      <p>Score the four factors for each company covered in the Third Eye View reports. Every factor has equal weight; rankings update as you enter scores.</p>
+      <h1>Compare the research coverage.<br><span>Find reports to explore.</span></h1>
+      <p>Companies are ranked automatically using the report date and page count listed in the library. This is a report-metadata comparison—not an analysis of report contents, company fundamentals, or investment quality.</p>
       <div class="tracker-stats" aria-live="polite">
         <div><strong id="company-count">0</strong><span>Companies</span></div>
-        <div><strong id="scored-count">0</strong><span>Fully scored</span></div>
-        <div><strong>25% each</strong><span>Equal weighting</span></div>
+        <div><strong id="scored-count">0</strong><span>Research reports</span></div>
+        <div><strong>10 points</strong><span>Maximum metadata score</span></div>
       </div>
     </section>
 
-    <section class="weight-card" aria-label="Scoring methodology">
-      <div class="weight-heading"><div><span class="section-kicker">SCORING FRAMEWORK</span><h2>Four factors, equal weight</h2></div><span class="scale-note">Score each factor from 0 to 10</span></div>
+    <section class="weight-card" aria-label="Ranking methodology">
+      <div class="weight-heading"><div><span class="section-kicker">DETERMINISTIC METHODOLOGY</span><h2>How the metadata score works</h2></div><span class="scale-note">No AI or external service</span></div>
       <div class="weight-grid">
-        <div><span class="weight-icon">📊</span><span class="weight-label">Financials</span><b>25%</b></div>
-        <div><span class="weight-icon">📈</span><span class="weight-label">Product demand</span><b>25%</b></div>
-        <div><span class="weight-icon">🏆</span><span class="weight-label">Market share</span><b>25%</b></div>
-        <div><span class="weight-icon">💧</span><span class="weight-label">Net debt &amp; working capital</span><b>25%</b></div>
+        <div><span class="weight-icon">📅</span><span class="weight-label">Report recency</span><b>0–5 pts</b></div>
+        <div><span class="weight-icon">📄</span><span class="weight-label">Report length</span><b>0–5 pts</b></div>
+        <div><span class="weight-icon">🗂️</span><span class="weight-label">Latest report per company</span><b>1 row</b></div>
+        <div><span class="weight-icon">🔎</span><span class="weight-label">Sort tie-breaker</span><b>Company A–Z</b></div>
       </div>
-      <p class="formula-note">Overall score = average of all four factor scores. A company is ranked only after all four scores are entered. For the balance-sheet factor, higher scores mean a stronger position (e.g. lower net debt and healthier working capital).</p>
+      <p class="formula-note">Recency points decrease linearly from 5 to 0 over 365 days. Length points are 0.5 per page, capped at 10 pages. The two components are added for a score out of 10. Missing metadata contributes 0. A higher score means a newer and/or longer listed report; it does not mean the company is better.</p>
     </section>
 
     <section class="tracker-panel" aria-labelledby="ranking-heading">
       <div class="tracker-toolbar">
-        <div><span class="section-kicker">YOUR WATCHLIST</span><h2 id="ranking-heading">Stock rankings</h2><p class="data-note">Scores are your own assessments—not ratings extracted from the reports.</p></div>
+        <div><span class="section-kicker">REPOSITORY RESEARCH</span><h2 id="ranking-heading">Company report ranking</h2><p class="data-note">Based only on company, ticker, date, description, and page count in docs.js.</p></div>
         <div class="tracker-actions">
           <label class="tracker-search-label" for="tracker-search">Search</label>
           <input id="tracker-search" class="tracker-search" type="search" placeholder="Company or ticker…" autocomplete="off">
           <button id="export-csv" class="tracker-button secondary" type="button">Export CSV</button>
-          <button id="reset-scores" class="tracker-button danger" type="button">Clear scores</button>
         </div>
       </div>
       <div class="table-scroll">
         <table class="ranking-table">
           <thead><tr>
-            <th scope="col" class="rank-col">Rank</th><th scope="col">Company</th>
-            <th scope="col">Financials <small>25%</small></th><th scope="col">Product demand <small>25%</small></th>
-            <th scope="col">Market share <small>25%</small></th><th scope="col">Net debt &amp; working capital <small>25%</small></th>
-            <th scope="col">Overall <small>/ 10</small></th><th scope="col">Report</th>
+            <th scope="col">Rank</th><th scope="col">Company</th><th scope="col">Report date</th>
+            <th scope="col">Pages</th><th scope="col">Report description</th>
+            <th scope="col">Metadata score <small>/ 10</small></th><th scope="col">Report</th>
           </tr></thead>
           <tbody id="ranking-rows"></tbody>
         </table>
       </div>
       <div id="empty-results" class="tracker-empty" hidden>No matching companies. Try another search.</div>
-      <div class="tracker-footnote"><span class="saved-indicator" id="saved-indicator" aria-live="polite">Scores save automatically in this browser.</span><span>Use report evidence and your own analysis; this tracker is not investment advice.</span></div>
+      <div class="tracker-footnote"><span id="ranking-status" class="saved-indicator" aria-live="polite">Ranking from repository metadata.</span><span>Metadata ranking only; not a measure of business quality or investment merit. Not investment advice.</span></div>
     </section>
   </main>
 
