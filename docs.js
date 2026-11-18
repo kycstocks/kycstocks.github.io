@@ -25,7 +25,7 @@ const DOCS = [
   },
    {
     id: "HSCL-R-26",
-    title: "Research Reports 26",
+    title: "Third Eye View 26",
     company: "Himadri Speciality Chemical Ltd.",
     ticker: "HSCL",
     category: "research",
@@ -35,11 +35,11 @@ const DOCS = [
     size: "354 KB",
     description: "HSCL_Forensic",
     file: "pdfs/HSCL_Forensic.pdf",
-    tags: [ "HSCL","Research Reports", "Q3 FY26"],
+    tags: [ "HSCL","Third Eye View", "Q3 FY26"],
   },
   {
     id: "RIR-R-26",
-    title: "Research Reports 26",
+    title: "Third Eye View 26",
     company: "RIR Power Electronics Ltd.",
     ticker: "RIRPOWER",
     category: "research",
@@ -49,11 +49,11 @@ const DOCS = [
     size: "349 KB",
     description: "RIR_POWER Forensic",
     file: "pdfs/RIR_POWER Forensic.pdf",
-    tags: [ "RIRPOWER","Research Reports", "Q3 FY26"],
+    tags: [ "RIRPOWER","Third Eye View", "Q3 FY26"],
   },
   {
     id: "Sammaan Capital-R-26",
-    title: "Research Reports 26",
+    title: "Third Eye View 26",
     company: "Sammaan Capital Ltd.",
     ticker: "SAMMAANCAP",
     category: "research",
@@ -63,7 +63,7 @@ const DOCS = [
     size: "325 KB",
     description: "Sammaan_Capital Forensic",
     file: "pdfs/Sammaan_Capital Forensic.pdf",
-    tags: [ "SAMMAANCAP","Research Reports", "Q3 FY26"],
+    tags: [ "SAMMAANCAP","Third Eye View", "Q3 FY26"],
   },
 ];
 
