@@ -142,6 +142,18 @@ const DOCS = [
     file: "https://www.bseindia.com/xml-data/corpfiling/AttachLive/a0fcc0c3-47b0-4ce7-a31d-c1e05af43285.pdf",
     tags: [ "SAMMAANCAP", "Con-Call Transcript", "Q3 FY26" ],
   },
+  {
+    id: "STLTECH-CC-Q3FY26",
+    title: "Q3 FY26 Earnings Call Transcript",
+    company: "Sterlite Technologies Ltd.",
+    ticker: "STLTECH",
+    category: "concall",
+    date: "2026-01-23",
+    year: "Q3 FY26",
+    description: "Official Q3 FY26 earnings call transcript from Sterlite Technologies.",
+    file: "https://www.stl.tech/pdf/investors/earning-call-transcripts/Earnings-Call-Transcript-Q3-FY26.pdf",
+    tags: [ "STLTECH", "Con-Call Transcript", "Q3 FY26" ],
+  },
 ];
 
 /**
