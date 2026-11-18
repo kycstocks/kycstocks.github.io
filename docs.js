@@ -33,8 +33,8 @@ const DOCS = [
     year: "Q3 FY26",
     pages: 5,
     size: "323 KB",
-    description: "Morepen Laboratories Limited — Forensic",
-    file: "pdfs/Morepen Laboratories Limited — Forensic",
+    description: "Morepen Laboratories Limited_Forensic",
+    file: "pdfs/Morepen Laboratories Limited_Forensic.pdf",
     tags: [ "MOREPENLAB","Third Eye View", "Q3 FY26"],
   },
   {
