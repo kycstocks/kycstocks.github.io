@@ -5,7 +5,17 @@
  *  1. Upload the file to the /pdfs/ folder in GitHub
  *  2. Add an entry below following the same structure
  *  3. Commit — site updates in ~30 seconds
+ *
+ * The date is optional. When omitted, it defaults to the current date.
  */
+
+const publicationDate = (() => {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = String(today.getMonth() + 1).padStart(2, "0");
+  const day = String(today.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+})();
 
 const DOCS = [
   // ── SAMPLE ENTRIES — replace with real PDFs ─────────────────
@@ -201,7 +211,7 @@ const DOCS = [
     category: "concall",
     date: "2026-07-24",
     year: "Q1 FY27",
-    description: "Official Q1 FY27 earnings conference call transcript from Sterlite Technologies.",
+    description: "Official Q1 FY27 earnings call transcript from Sterlite Technologies.",
     file: "https://stl.tech/wp-content/uploads/2026/07/Transcript-July-24-2026.pdf",
     tags: [ "STLTECH", "Con-Call Transcript", "Q1 FY27" ],
   },
@@ -213,11 +223,11 @@ const DOCS = [
     category: "concall",
     date: "2026-10-23",
     year: "Q2 FY27",
-    description: "Official Q2 FY27 earnings conference call transcript from Sterlite Technologies.",
+    description: "Official Q2 FY27 earnings call transcript from Sterlite Technologies.",
     file: "https://stl.tech/wp-content/uploads/2026/10/Investor-Earnings-Transcript.pdf",
     tags: [ "STLTECH", "Con-Call Transcript", "Q2 FY27" ],
   },
-];
+].map(doc => ({ ...doc, date: doc.date || publicationDate }));
 
 /**
  * Get unique companies from DOCS
