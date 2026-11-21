@@ -39,7 +39,6 @@ const DOCS = [
     company: "Ather Energy Limited",
     ticker: "ATHERENERG",
     category: "research",
-    date: "2026-11-15",
     year: "Q2 FY27",
     pages: 5,
     size: "323 KB",
