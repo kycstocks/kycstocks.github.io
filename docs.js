@@ -39,6 +39,7 @@ const DOCS = [
     category: "research",
     description: "Hyperscaler Financial & Working Capital Analysis",
     file: "pdfs/Hyperscaler Financial & Working Capital Analysis.pdf",
+    tags: [ "Hyperscalers","Third Eye View"],
   },
   {
     id: "Ather Energy -R-26",
