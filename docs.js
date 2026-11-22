@@ -34,6 +34,13 @@ const DOCS = [
     tags: [ "HFCL","Third Eye View", "Q2 FY27"],
   },
   {
+    id: "Hyperscaler",
+    title: "Hyperscaler Financial & Working Capital Analysis",
+    category: "research",
+    description: "Hyperscaler Financial & Working Capital Analysis",
+    file: "pdfs/Hyperscaler Financial & Working Capital Analysis.pdf",
+  },
+  {
     id: "Ather Energy -R-26",
     title: "Third Eye View 26",
     company: "Ather Energy Limited",
